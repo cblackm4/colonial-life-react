@@ -11,7 +11,6 @@ const StyledContent = styled(Content)``;
 
 const StyledSection = styled(Section)`
     padding: 4rem 2rem;
-
     @media screen and (min-width: 960px) {
         padding: 4rem 0rem;
     }
@@ -29,7 +28,6 @@ const SectionHeading = styled.h1`
 const SectionImage = styled.img`
     height: ${({ imgsize }) =>
         (imgsize === "sm-img" && "20rem") || (imgsize === "lg-img" && "20rem")};
-
     @media screen and (min-width: 960px) {
         height: ${({ imgsize }) =>
             (imgsize === "sm-img" && "20rem") ||
@@ -45,10 +43,16 @@ const SectionSubHeading = styled.h2`
 
 const StyledSubSection = styled(Section)`
     display: flex;
-    justify-content: ${({ imgalign }) =>
-        (imgalign === "img-left" && "flex-start") ||
-        (imgalign === "img-center" && "center")};
+    justify-content: center;
     margin: auto;
+    padding-bottom: 5rem;
+
+    @media screen and (min-width: 960px) {
+        justify-content: ${({ imgalign }) =>
+            (imgalign === "img-left" && "flex-start") ||
+            (imgalign === "img-center" && "center")};
+        padding-bottom: 0;
+    }
 `;
 
 const StyledWideContainer = styled(WideContainer)``;
