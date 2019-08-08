@@ -6,8 +6,8 @@ const Logo = styled.img`
     width: 200px;
     padding: 2rem 2rem;
 
-    @media screen and (min-width: 960px) {
-        padding: 2rem 0;
+    @media screen and (min-width: 1200px) {
+        margin-left: 0.5rem;
     }
 `;
 

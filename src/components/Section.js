@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Section = styled.div`
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1200px) {
         flex-basis: ${({ flexbasis }) =>
             (flexbasis === "1/3" && "33%") ||
             (flexbasis === "2/3" && "66%") ||

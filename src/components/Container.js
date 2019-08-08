@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
-    max-width: 1190px;
+    max-width: 1200px;
 `;
 
 export default Container;

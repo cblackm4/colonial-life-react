@@ -29,7 +29,7 @@ const CardSection = styled(Section)`
     padding: 2rem 0;
     padding-bottom: 5rem;
 
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1200px) {
         padding: 0;
         &:first-child {
             margin-left: 0;

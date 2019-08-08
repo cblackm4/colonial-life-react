@@ -11,7 +11,7 @@ const StyledContent = styled(Content)``;
 
 const StyledSection = styled(Section)`
     padding: 4rem 2rem;
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1200px) {
         padding: 4rem 0rem;
     }
 `;
@@ -28,7 +28,7 @@ const SectionHeading = styled.h1`
 const SectionImage = styled.img`
     height: ${({ imgsize }) =>
         (imgsize === "sm-img" && "20rem") || (imgsize === "lg-img" && "20rem")};
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1200px) {
         height: ${({ imgsize }) =>
             (imgsize === "sm-img" && "20rem") ||
             (imgsize === "lg-img" && "40rem")};
@@ -47,11 +47,12 @@ const StyledSubSection = styled(Section)`
     margin: auto;
     padding-top: 5rem;
 
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1200px) {
         justify-content: ${({ imgalign }) =>
             (imgalign === "img-left" && "flex-start") ||
             (imgalign === "img-center" && "center")};
         padding-top: 0;
+        margin-right: 5rem;
     }
 `;
 
