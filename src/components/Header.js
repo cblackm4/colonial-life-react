@@ -4,10 +4,10 @@ import Container from "./Container";
 
 const Logo = styled.img`
     width: 200px;
-    padding: 2rem 2rem;
+    margin 2rem 4.2rem;
 
     @media screen and (min-width: 1200px) {
-        margin-left: 0.5rem;
+        margin-left: 2.5rem;
     }
 `;
 
