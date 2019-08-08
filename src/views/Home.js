@@ -45,13 +45,13 @@ const StyledSubSection = styled(Section)`
     display: flex;
     justify-content: center;
     margin: auto;
-    padding-bottom: 5rem;
+    padding-top: 5rem;
 
     @media screen and (min-width: 960px) {
         justify-content: ${({ imgalign }) =>
             (imgalign === "img-left" && "flex-start") ||
             (imgalign === "img-center" && "center")};
-        padding-bottom: 0;
+        padding-top: 0;
     }
 `;
 
@@ -65,6 +65,7 @@ const content = [
         bgcolor: "col-blue",
         flexMain: "2/3",
         flexSec: "1/3",
+        rev: "true",
         txtcolor: "white",
         font: "oswald",
         size: "lg-heading",
@@ -84,7 +85,7 @@ const content = [
         bgcolor: "col-white",
         flexMain: "1/2",
         flexSec: "1/2",
-        rev: "true",
+        rev: "false",
         font: "osans",
         size: "sm-heading",
         img: displays,
@@ -109,6 +110,12 @@ export default class extends React.Component {
                 txtcolor={content.txtcolor}
             >
                 <StyledContent reverse={content.rev}>
+                    <StyledSubSection flexbasis={content.flexSec}>
+                        <SectionImage
+                            src={content.img}
+                            imgsize={content.imgsize}
+                        />
+                    </StyledSubSection>
                     <StyledSection flexbasis={content.flexMain}>
                         <SectionHeading
                             ffamily={content.font}
@@ -126,15 +133,6 @@ export default class extends React.Component {
                             }}
                         />
                     </StyledSection>
-                    <StyledSubSection
-                        flexbasis={content.flexSec}
-                        imgalign={content.imgalign}
-                    >
-                        <SectionImage
-                            src={content.img}
-                            imgsize={content.imgsize}
-                        />
-                    </StyledSubSection>
                 </StyledContent>
             </StyledWideContainer>
         ));
